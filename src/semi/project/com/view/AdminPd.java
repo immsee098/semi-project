@@ -359,10 +359,25 @@ public class AdminPd extends javax.swing.JFrame implements ActionListener{
             JOptionPane.showMessageDialog(this, "상품을 선택해주세요.");
             return;
         }
+        ProductDTO dto = new ProductDTO();
+        
+        String pdname = tfName.getText();
+        int pdprice = Integer.parseInt(tfPrice.getText());
+        int pdqty = 0;
+        String pddesc = taDesc.getText();
+        String pdimg = "테스트";
+        
+        dto.setPdName(pdname);
+        dto.setPdNo(Integer.parseInt(no));
+        dto.setPdPrice(pdprice);
+        dto.setPdQty(pdqty);
+        dto.setPdDesc(pddesc);
+        dto.setPdImg(pdimg);
+        
         
         int result = JOptionPane.showConfirmDialog(this, "삭제하시겠습니까", "삭제", JOptionPane.YES_NO_OPTION);
          if(result==JOptionPane.YES_OPTION){
-             int cnt = mainDao.deleteProduct(Integer.parseInt(no));
+             int cnt = mainDao.updatePd(dto);
              
              if(cnt>0){
                  JOptionPane.showMessageDialog(this, "상품 삭제 완료");

@@ -651,8 +651,10 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener{
                 JOptionPane.showMessageDialog(this, "카트에 등록되었습니다.");
                 int afterQty = pdto.getPdQty()-Integer.parseInt(tfQty.getText());
                 pdto = new ProductDTO(pdNo, name, pdPrice, afterQty, pdDesc, pdImg);
+                lbQty.setText(afterQty+"");
                 
                 maindao.updatePd(pdto);
+                init();
        
             } else {
                 JOptionPane.showMessageDialog(this, "카트 등록 실패");
