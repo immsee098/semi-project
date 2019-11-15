@@ -480,6 +480,13 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener{
                 } else {
                     btSign.setText("로그인");
                 } 
+       
+       String verEmail = lbEmail.getText();
+            if(verEmail.equals("admin@admin.com")){
+                btAdmin.setVisible(true);
+            } else {
+                btAdmin.setVisible(false);
+            }
     }
 
     private void addEvent() {
@@ -552,7 +559,6 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener{
                 asl.setVisible(true);
             } else {
                 JOptionPane.showMessageDialog(this, "관리자로 로그인 요망.");
-                btAdmin.setVisible(false);
             }
             
         }
