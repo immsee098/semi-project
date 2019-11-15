@@ -600,15 +600,8 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener{
                     data[i][1] = 0 +"";
                 }          
             }
-            ProductDTO dto = new ProductDTO();
-            int idx = maindao.PdselectByName(dto.getPdName()).getPdNo();
-            String str = "../image/"+idx;
-            lbImg = new JLabel();
-            ImageIcon icon = new ImageIcon(str); 
-            lbImg.setIcon(icon);
             model.setDataVector(data, colNames);
             table1.setModel(model);
-            
         } catch (SQLException ex) {
             Logger.getLogger(MainGUI.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -654,6 +647,7 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener{
                 lbQty.setText(afterQty+"");
                 
                 maindao.updatePd(pdto);
+                clear_all();
                 init();
        
             } else {
@@ -661,8 +655,15 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener{
             }
     }
 
-    private void Test1() {
-        JOptionPane.showMessageDialog(this, "테스트");
+    private void clear_all() {
+        tfPdName.setText("");
+        tfPrice.setText("");
+        tfQty.setText("1");
+        taDesc.setText("");
+        ImageIcon icon = new ImageIcon(""); 
+        lbImg.setIcon(icon);
+        lbQty.setText("0");
+
     }
 
 
@@ -681,7 +682,13 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener{
                 tfPrice.setText(dto.getPdPrice()+"");
                 lbQty.setText(dto.getPdQty()+"");
                 taDesc.setText(dto.getPdDesc());
-                lbImg.setText(dto.getPdImg());
+                
+                    
+                String pdimg = dto.getPdImg();
+                ImageIcon icon = new ImageIcon(pdimg); 
+                lbImg.setIcon(icon);
+                
+            
                 
             } catch (SQLException ex) {
                 Logger.getLogger(MainGUI.class.getName()).log(Level.SEVERE, null, ex);

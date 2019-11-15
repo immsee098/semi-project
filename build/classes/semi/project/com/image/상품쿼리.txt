@@ -1,0 +1,21 @@
+﻿	insert into pdtable value (seq_pd.nextval, 'adidas Originals Tubular Shadow', 44000, 23, '아디다스 신발', '..\image\02_1번신발');
+	insert into pdtable value (seq_pd.nextval, 'Nike Air Zoom Pegasus 34 FlyEase', 33000, 80, '나이키 신발', '..\image\02_2번신발');
+	insert into pdtable value (seq_pd.nextval, 'Nike Flex 2019 RN', 50000, 10, '나이키 신발', '..\image\02_3번신발');
+	insert into pdtable value (seq_pd.nextval, 'PUMA Thunder Spectra', 29000, 20, '푸마 신발', '..\image\02_4번신발');
+	
+	insert into pdtable value (seq_pd.nextval, '퍼플리스 레터 후드 풀오버', 31920, 15, '1번옷', '..\image\00_1번옷');
+	insert into pdtable value (seq_pd.nextval, '레트로 리조트 반팔 티셔츠', 9900, 40, '2번옷', '..\image\00_1번옷');
+	insert into pdtable value (seq_pd.nextval, '카라 단추 스웨터', 19900, 30, '3번옷', '..]image\00_1번옷');
+	insert into pdtable value (seq_pd.nextval, '베이직 에어 푸퍼(숏패딩)', 49900, 50, '4번옷', '..\image\00_1번옷');
+
+	insert into PdTable
+	values(seq_pd.nextval,'초코파이',5400,200,'오리온 정, 더 커졌습니다','..\image\chocoPi.jpg');
+
+	insert into PdTable
+	values(seq_pd.nextval,'허니버터칩',2400,2,'프랑스산 고메버터, 달콤바삭 감자칩','..\image\HBC.jpg');
+
+	insert into PdTable
+	values(seq_pd.nextval,'새우깡',900,100,'손이 가요, 손이 가. 자꾸자꾸 손이 가','..\image\shrimp.jpg');
+
+	insert into PdTable
+	values(seq_pd.nextval,'고래밥',500,30,'라두와 친구들','..\image\whaleMeal.jpg');

@@ -2,6 +2,10 @@
 
 /* 시퀀스 4개 만들기 */
 
+insert into PdTable
+	values(seq_pd.nextval,'고래밥3',500,30,'라두와 친구들','C:\Users\dbstj\Desktop\semi-project-master\src\semi\project\com\image\whaleMeal.jpg');
+	commit;
+
 select * from memtable;
 select * from carttable;
 select * from pdtable;

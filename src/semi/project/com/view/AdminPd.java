@@ -35,6 +35,7 @@ public class AdminPd extends javax.swing.JFrame implements ActionListener{
     private DefaultTableModel model = new DefaultTableModel();
     private String[] colNames = {"상품 넘버", "상품 이름", "상품 가격"};
 
+
     /**
      * Creates new form AdminPd
      */
@@ -321,6 +322,7 @@ public class AdminPd extends javax.swing.JFrame implements ActionListener{
         int price = Integer.parseInt(tfPrice.getText());
         String desc = taDesc.getText();
         int qty = Integer.parseInt(tfQty.getText());
+
         
         if(no.isEmpty() || no==null){
             JOptionPane.showMessageDialog(this, "수정할 상품을 선택해주세요.");
